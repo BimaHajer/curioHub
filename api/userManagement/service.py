@@ -4,6 +4,7 @@ from django.http import HttpResponse
 
 from rest_framework import status
 from rest_framework.response import Response
+
 def invalid_input(input_name):
     """
     this function return an invalid input
