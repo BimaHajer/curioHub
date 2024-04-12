@@ -44,13 +44,6 @@ class UserApp(AbstractBaseUser,models.Model):
     deleted = models.BooleanField(default=False)
     post = models.CharField(max_length=30, blank=True)
     about = models.CharField(max_length=255, blank=True)
-    status_choices = [
-        ('online', 'Online'),
-        ('away', 'Away'),
-        ('busy', 'Do not disturb'),
-        ('offline', 'Offline'),
-    ]
-    status = models.CharField(max_length=10, choices=status_choices, default="Online")
 
     USERNAME_FIELD = ['email','username']
     REQUIRED_FIELDS = ['email','username']
